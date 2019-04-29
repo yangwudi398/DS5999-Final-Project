@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# Scrap the content for NYTimes news articles in 2018
+# Scrap the content for NYTimes news articles about Middle East in 2017
 
 import re
 import sqlite3
