@@ -15,12 +15,21 @@ conn = sqlite3.connect(nytimes_db)
 nyt_2018 = pd.read_sql("SELECT * FROM middle_east_2018", conn)
 conn.close()
 
-# Methods for scraping the news conent with an url
+# Methods for Scraping the news content with an url
 def get_page_content(url):
-    page = requests.get(url)
+    # Load a web page
+    try:
+        page = requests.get(url)
+    except: # Reload if a request fails
+        page = requests.get(url)
+    
+    # Constitute a tree
     tree = html.fromstring(page.content)
+    
+    # Retrieve content
     content_list = tree.xpath("//section[@name='articleBody']//p/text()")
     content = " ".join(content_list)
+    
     return content
 
 def get_content(df_data):
@@ -31,6 +40,7 @@ def get_content(df_data):
     for i in df_data.index:
         # Get the date
         date = df_data.loc[i, "date"]
+        print(date) # Show the current date
         
         # Get the titles of news in that day
         titles = df_data.loc[i, "titles"]
@@ -50,6 +60,8 @@ def get_content(df_data):
         for j in range(len(titles)):
             title = re.sub("-", " ", titles[j])
             url = "http://" + urls[j]
+            
+            print(url) # Show the current url
             content = get_page_content(url)
             
             # Append the title, url and content of a news to the content table
