@@ -71,7 +71,7 @@ def get_content(df_data):
     return df_content
 
 
-# Get content for news in January 2018
+# Get content for news in January 2016
 def in_jan(date):
     return date < "2016-02-01"
 
