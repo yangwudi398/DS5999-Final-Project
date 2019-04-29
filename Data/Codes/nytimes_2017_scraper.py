@@ -10,7 +10,7 @@ import pandas as pd
 from lxml import html
 
 # Import the news database
-nytimes_db = "nytimes.db"
+nytimes_db = "../nytimes.db"
 conn = sqlite3.connect(nytimes_db)
 nyt_2017 = pd.read_sql("SELECT * FROM middle_east_2017", conn)
 conn.close()
@@ -156,7 +156,7 @@ dec_2017 = nyt_2017[nyt_2017["date"].apply(in_dec)]
 dec_2017_content = get_content(dec_2017)
 
 # Export the news content in 2017
-nytimes_2017_db = "nytimes_2017.db"
+nytimes_2017_db = "../nytimes_2017.db"
 conn = sqlite3.connect(nytimes_2017_db)
 
 jan_2017_content.to_sql("2017_01", conn, if_exists="replace", index=False)
