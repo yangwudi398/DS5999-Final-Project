@@ -11,7 +11,7 @@ from lxml import html
 
 # Import the news database
 nytimes_db = "nytimes.db"
-conn = sqlite3.connect(nytimes_db)
+conn = sqlite3.connect(../nytimes_db)
 nyt_2015 = pd.read_sql("SELECT * FROM middle_east_2015", conn)
 conn.close()
 
@@ -156,7 +156,7 @@ dec_2015 = nyt_2015[nyt_2015["date"].apply(in_dec)]
 dec_2015_content = get_content(dec_2015)
 
 # Export the news content in 2015
-nytimes_2015_db = "nytimes_2015.db"
+nytimes_2015_db = "../nytimes_2015.db"
 conn = sqlite3.connect(nytimes_2015_db)
 
 jan_2015_content.to_sql("2015_01", conn, if_exists="replace", index=False)
