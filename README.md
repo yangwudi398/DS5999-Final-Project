@@ -1,7 +1,7 @@
 # DS5999-Final-Project
 Final Project for DS5999 by Jingnan Yang
 
-The F4 version of the text is too big to upload,
+The F4 version of the data is too big to upload,
 They can be accessed at this link to the UVA Box.
 https://virginia.box.com/s/akdfxa5a4n0bkz7mfvuygalzijtcgd6r
 
