@@ -4,4 +4,4 @@
 
 **pca.csv** is the table of 10 principal components for each document.
 
-**Principal** Component Analysis.ipynb" shows scatter graphs of principal components across different years.
+**Principal Component Analysis.ipynb** shows scatter graphs of principal components across different years.
