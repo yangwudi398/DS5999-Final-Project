@@ -1,4 +1,4 @@
-# DS5999-Final-Project
+# DS5999 Final Project
 Final Project for DS5999 by Jingnan Yang
 
 **The F4 version of the data is too big to upload.**
