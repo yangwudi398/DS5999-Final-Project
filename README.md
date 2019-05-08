@@ -1,7 +1,7 @@
 # DS5999 Final Project
 Final Project for DS5999 by Jingnan Yang
 
-**The F4 version of the data  and the topic modeling database are too huge to upload here.**
+**The F4 version of the data  and the topic modeling database are too huge to upload here.**<br>
 **They can be accessed at this link to the public UVA Box.**<br/>
 https://virginia.box.com/s/akdfxa5a4n0bkz7mfvuygalzijtcgd6r
 
